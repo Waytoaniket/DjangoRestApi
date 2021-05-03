@@ -1,0 +1,1 @@
+web: gunicorn NutureLab.wsgi --log-file -
