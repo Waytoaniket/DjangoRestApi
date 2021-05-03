@@ -94,6 +94,6 @@ def BookedAdvisorList(request,userid):
         Advsorlist = CallBooked.objects.filter(User=userid)
         data = []
         for i in Advsorlist:
-            data.append({"User": i.User, "Advisor": i.Advisor, "Time": i.Time})
+            data.append({"User": i.User.Name, "Advisor": i.Advisor.Name, "Time": i.Time})
        
         return JsonResponse(str(data), safe=False)
